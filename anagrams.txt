@@ -1,0 +1,26 @@
+<p>We just checked our entire dictionary for anagrams of the word you gave us.....</p>
+
+<% @words.each do |word1| %>
+<%if @user_input_ordered == word1.ordered %>
+<% @anagrams << word1 %>
+<% end %>
+<%end %>
+
+
+<ol>
+  <% @anagrams.each do |anagram| %>
+  <li><%= anagram %><li>
+    <% end %>
+  </ol>
+
+
+
+  # @words is an array of the dictionary words
+
+  #@words = Word.all
+
+  #user_input = the user's input word
+
+  #@anagrams = #@words.map |word1|
+  # if user_input == word1.ordered
+  #end
